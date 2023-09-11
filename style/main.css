@@ -1,0 +1,462 @@
+@import 'fonts.css';
+
+
+* {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+
+
+:root {
+    font-size   : 20px;
+    --text      : #FFFFFF;
+    --extra     : #ADBC00;
+    --title     : #323232;
+    --radial    : radial-gradient(50% 50.00% at 50% 50.00%, rgba(102, 102, 102, 0.79) 0%, #666 100%);
+    --galary    : #C4C4C4;
+    --slider    : linear-gradient(90deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.40) 33.85%, rgba(0, 0, 0, 0.40) 66.15%, rgba(0, 0, 0, 0.20) 100%);
+    --extra_dark: #798401;
+    --tabs      : #909090;
+    --nav       : #636363;
+    --about     : #606060;
+    --main      : #ECECEC;
+    --Font_R    : 'Roboto';
+    --Font_M    : 'Montserrat';
+    --Font-RW   : 'Ralwey';
+}
+
+
+body {
+    font-size : 16px;
+    background: var(--main);
+}
+
+
+.title {
+    color         : var(--title);
+    font-size     : 40px;
+    font-family   : var(--Font_M);
+    font-weight   : 700;
+    text-transform: uppercase;
+    text-align    : center;
+    display       : block;
+}
+
+
+.title:hover {
+    color: var(--title);
+}
+
+.limiter {
+    display           : -webkit-box;
+    -webkit-box-orient: vertical;
+    white-space       : normal;
+    min-height        : 5px;
+    text-overflow     : ellipsis;
+    -webkit-line-clamp: 5;
+    overflow          : hidden;
+}
+
+
+
+.header {
+    background: var(--nav);
+}
+
+.header__nav {
+    padding: 0;
+}
+
+.header__nav-content {
+    flex-grow: 0;
+}
+
+.header__nav-list {
+    margin : 0;
+    padding: 0;
+}
+
+
+.header__nav-link {
+    color          : var(--text);
+    font-family    : var(--Font_R);
+    font-weight    : 700;
+    text-transform : uppercase;
+    padding        : 24px 4px;
+    border-bottom  : 2px solid transparent;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    transition     : 300ms;
+}
+
+.header__nav-link:hover {
+    border-color: var(--extra);
+    color       : var(--extra);
+}
+
+.header__nav-link img {
+    padding-bottom: 4px;
+}
+
+
+.header__nav-item {
+    margin-right: 26px;
+}
+
+.header__nav-item:last-of-type {
+    margin-right: 0;
+}
+
+
+.header__nav-btn:focus {
+    outline   : none;
+    box-shadow: none;
+}
+
+
+.header__navdroplink {
+    color     : var(--extra);
+    display   : block;
+    text-align: center;
+    padding   : 5px 10px;
+    transition: 300ms;
+}
+
+.header__navdroplink:hover {
+    color        : var(--text);
+    border-radius: 6px;
+    background   : var(--extra_dark);
+}
+
+.header__navdroplist {
+    left      : auto !important;
+    right     : 10px;
+    padding   : 0;
+    border    : none;
+    width     : max-content;
+    border    : 1px solid var(--extra);
+    background: var(--nav);
+    margin-top: -0.5rem !important;
+}
+
+
+
+
+/* slider******************************************************************** */
+
+
+
+
+.slider__pic {
+    width     : 100%;
+    height    : 100%;
+    object-fit: cover;
+    position  : absolute;
+}
+
+.slider__content {
+    position  : relative;
+    width     : 100%;
+    min-height: 100vh;
+    background: var(--slider);
+}
+
+
+.slider__container_tile {
+    font-size  : 50px;
+    color      : var(--text);
+    font-family: var(--Font_M);
+    font-weight: 700;
+    max-width  : 708px;
+    width      : 100%;
+}
+
+.slider__container_tile span {
+    color: var(--extra);
+}
+
+
+.slider__container_desc {
+    color      : var(--text);
+    font-size  : 1.5rem;
+    font-family: var(--Font_M);
+    margin     : 16px 0 62px;
+}
+
+.slider__container_link {
+    display      : block;
+    padding      : 20px 87px;
+    width        : max-content;
+    background   : var(--extra);
+    border-radius: 10px;
+    font-family  : var(--Font_R);
+    font-weight  : 700;
+    font-size    : 22px;
+    transition   : 300ms;
+    box-shadow   : 4px 4px 0 0 var(--extra_dark);
+    color        : var(--text);
+}
+
+.slider__container_link:hover {
+    color: var(--text);
+}
+
+
+.slider__container_link:active {
+    transform : translateX(4px) translateY(4px);
+    box-shadow: 0 0 0 0;
+}
+
+
+
+.carousel-indicators [data-bs-target] {
+    width        : 1rem;
+    height       : 1rem;
+    border-radius: 50%;
+    opacity      : 1;
+    border       : none;
+    transition   : 300ms;
+    margin-right : 1.25rem;
+}
+
+.carousel-indicators [data-bs-target]:last-of-type {
+    margin-right: 0;
+}
+
+.carousel-indicators .active {
+    background: var(--extra);
+}
+
+
+/* about_us**************************************************************** */
+
+
+.about_tittle{
+   margin-top: 52px;
+}
+ 
+
+
+.about_us_box span{
+    width: 100%;
+    height: 250px;
+    background: var(--extra);
+}
+
+
+.about_us_content{
+    color: white;
+    background: var(--about);
+    padding-top: 50px;
+    padding-bottom: 50px;
+    max-width: 850px;
+    width: 100%;
+    font-family: var(--Font_R);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+/* bicyle*************************************************************** */
+
+.bicycle_tittle{
+    margin-top: 50px;
+}
+
+
+.nav_link{
+    color: #909090;
+    font-family: 'Montserrat';
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    transition: 400ms;
+    border-bottom: 2px solid transparent;
+}
+
+.nav_link:hover{
+    color: #ADBC00;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--extra);
+}
+
+
+.nav_link.active{
+    color: #ADBC00;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--extra);
+}
+
+.tab__content{
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 2.3rem;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+
+.tab__item{
+    background: var(--radial);
+    border-radius: 10px;
+    padding: 50px 50px 50px 30px;
+}
+
+
+.tab__item_tittle,
+.tab__item_desc{
+    color: #FFF;
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.tab__item_tittle{
+    margin: 0;
+}
+
+.tab__item_price{
+    color: #ADBC00;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.5rem;
+    display: block;
+    text-align: end;
+}
+
+
+/* Tariff************************************************************************* */
+
+.tarif_tittle{
+    margin: 50px auto 40px;
+}
+
+.item__card{
+    border-radius: 10px;
+    background: #323232;
+    margin-bottom: 32px;
+}
+
+.item__card:last-of-type{
+    margin-bottom: 0;
+}
+
+.card__pic{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.card__content{
+    color: white;
+    padding: 40px 30px;
+}
+
+.card__tittle{
+    font-size: 25px;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 23px;
+}
+
+.card__desc{
+    font-size: 20px;
+    font-family: 'Roboto';
+    line-height: 150%;
+    font-weight: 400;
+}
+
+.card__price{
+    font-size: 30px;
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-style: normal;
+    line-height: 150%;
+    margin-right: 25px;
+}
+
+.card__btn{
+    border-radius: 10px;
+    background: #ADBC00;
+    color: #323232;
+    font-size: 22px;
+    font-family: 'Roboto';
+    font-weight: 700;
+    padding: 19px 72px;
+    transition: 400ms;
+    margin-bottom: 0;
+}
+
+.card__btn:hover{
+    border-radius: 10px;
+    background: #FFF;
+    color: var(--extra);
+}
+
+/* Why choose us******************************** */
+
+.why_tittle{
+    margin: 30px auto 40px;
+}
+
+
+.choose__card{
+    border-radius: 10px;
+    background: #ADBC00;
+    box-shadow: 0px 30px 20px -20px rgba(173, 188, 0, 0.50);
+    max-width: 410px;
+    width: 100%;
+    padding: 40px 75px;
+    text-align: center;
+    margin-right: 30px;
+}
+
+.choose__card:last-of-type{
+    margin-right: 0;
+}
+
+.choose__tittle{
+    color: #323232;
+    font-size: 30px;
+    font-family: 'Montserrat';
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.choose__desc{
+    color: #FFF;
+    font-size: 20px;
+    font-family: 'Roboto';
+    font-weight: 400;
+}
+
+
+
+
+
+
+@media (max-width: 991px) {
+    .header__nav-link {
+        padding: 5px 0;
+    }
+
+    .header__nav-item {
+        margin-right: 0;
+    }
+}
